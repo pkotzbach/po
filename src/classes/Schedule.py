@@ -1,5 +1,5 @@
 import datetime
-from classes.Semester import Semester
+from main.classes.Semester import Semester
 
 
 class Schedule:

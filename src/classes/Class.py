@@ -8,3 +8,6 @@ class Class:
         self.time = time
         self.form = form
         self.studentsNum = studentsNum
+
+    def __str__(self):
+        return self.code + " " + self.name

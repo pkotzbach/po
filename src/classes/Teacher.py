@@ -5,13 +5,13 @@ class Teacher:
     def __init__(
         self,
         id,
-        name,
-        surname,
+        name: str,
+        surname: str,
         pesel,
         password,
         email,
         lastHosp: datetime.datetime,
-        degree,
+        degree: str,
         wzhz,
         cathedral,
     ):
@@ -25,6 +25,10 @@ class Teacher:
         self.degree = degree
         self.wzhz = wzhz
         self.cathedral = cathedral
+        self.classes = []
 
-    def getFullName(self):
-        return self.degree + " " + self.name + " " + self.surname
+    def getFullName(self) -> str:
+        return str(self.degree) + " " + self.name + " " + self.surname
+
+    def __str__(self) -> str:
+        return self.getFullName()
